@@ -1,97 +1,125 @@
-.section-about {
-    text-align: center;
-    padding: 80px 20px;
-    background-color: var(--white);
-    border-radius: 12px;
-    max-width: 900px;
-    margin: auto;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
-.section-about h2 {
-    padding-top: 30px;
-    font-size: 36px;
-    color: var(--darkBlue);
-    margin-bottom: 15px;
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* About Section */
+.section-about {
+    background-color: #fff;
+    padding: 40px 20px;
+    text-align: center;
 }
 
 .div-about {
-    font-size: 18px;
-    color: var(--dark-grey);
+    font-size: 1.1rem;
+    color: #666;
+    margin-top: 20px;
     line-height: 1.8;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Features Section */
+.features-section {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+}
+
+.features-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    margin: 20px;
     padding: 20px;
-    border-radius: 10px;
-    background: var(--soft-grey);
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Our Team */
-.team-section {
     text-align: center;
-    padding: 60px 20px;
-    background: var(--white);
-    border-radius: 12px;
-    max-width: 1100px;
-    margin: 40px auto;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
-.team-section h2 {
-    font-size: 34px;
-    color: var(--darkBlue);
-    margin-bottom: 30px;
+.feature-card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
 }
 
+.feature-card h3 {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #777;
+    font-size: 1rem;
+}
+
+/* Hover Effect for Feature Cards */
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Team Section (commented out) */
+.team-section {
+    background-color: #fff;
+    padding: 40px 20px;
+}
 
 .team-container {
     display: flex;
-    justify-content: center;
-    gap: 25px;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
 .team-member {
-    background: var(--white);
-    border-radius: 12px;
-    padding: 20px;
+    width: 200px;
+    margin: 20px;
     text-align: center;
-    width: 280px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    border: 2px solid var(--Medium-blue);
-}
-
-.team-member:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    background-color: var(--soft-grey);
-}
-
-.team-member img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 8px;
-    border: 3px solid var(--light-blue);
 }
 
 .name-team {
-    font-size: 22px;
-    color: var(--darkBlue);
-    margin: 10px 0;
-    font-weight: bold;
+    font-size: 1.2rem;
+    color: #333;
 }
 
 .role-team {
-    font-size: 16px;
-    color: var(--dark-grey);
+    font-size: 1rem;
+    color: #777;
 }
 
-/*  جعل التصميم متجاوب */
+/* Responsive Styles */
 @media (max-width: 768px) {
-    .section-about,
-    .team-section {
-        padding: 50px 15px;
+    .features-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-card {
+        width: 80%;
+        margin: 15px 0;
     }
 
     .team-container {
@@ -100,42 +128,7 @@
     }
 
     .team-member {
-        width: 90%;
-        max-width: 350px;
+        width: 80%;
+        margin: 10px 0;
     }
 }
-
-@media (max-width: 480px) {
-    .section-about h2,
-    .team-section h2 {
-        font-size: 28px;
-        padding: 90px 30px;
-    }
-
-    .div-about {
-        font-size: 16px;
-    }
-
-    .name-team {
-        font-size: 20px;
-    }
-
-    .role-team {
-        font-size: 14px;
-    }
-}
-/*
-::-webkit-scrollbar{
-    width: .8rem;
-}
-
-::-webkit-scrollbar-thumb{
-    background-color:darkblue;
-    border-radius: 3rem;
-}
-::-webkit-scrollbar-track{
-    background-color: white;
-    margin-block: -.4rem;
-    border-radius: 3rem;
-
-}*/

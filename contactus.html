@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <style>
+        /* General Styles for Form */
+.container-c {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #4CAF50;
+}
+
+/* Button Style */
+.bttn {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.bttn:hover {
+    background-color: #45a049;
+}
+
+/* Loading and Feedback Styles */
+#loading, #feedback {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 15px;
+}
+
+#loading {
+    color: blue;
+}
+
+#feedback {
+    color: green;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container-c {
+        padding: 20px;
+        width: 90%;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    
+    <section><header class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-3 col-lg-2">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-7">
+                    <nav class="header__menu">
+                        <ul>
+                            <li class="active"><a href="./index.html">Home</a></li>
+                           
+                         
+                            <li><a href="./shop.html">Shop</a></li>
+                            <li><a href="#">Pages</a>
+                                <ul class="dropdown">
+                                    <li><a href="./product-details.html">Product Details</a></li>
+                                    <li><a href="./shop-cart.html">Shop Cart</a></li>
+                                    <li><a href="./checkout.html">Checkout</a></li>
+                                    <li><a href="./blog-details.html">Blog Details</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contactus.html">Contact</a></li>
+                            <li><a href="aboutus.html">About Us</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3">
+                    <div class="header__right">
+                        <div class="header__right__auth">
+                            <a href="#">Login</a>
+                            <a href="#">Register</a>
+                        </div>
+                        <ul class="header__right__widget">
+                            <li><span class="icon_search search-switch"></span></li>
+                            <li><a href="#"><span class="icon_heart_alt"></span>
+                                <div class="tip">2</div>
+                            </a></li>
+                            <li><a href="#"><span class="icon_bag_alt"></span>
+                                <div class="tip">2</div>
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header></section>
+    <div>
+        <div class="container-c">
+          <h2>Get In Touch</h2>
+          <form id="contact-form" onsubmit="sendMail(event)">
+            <input
+              type="text"
+              id="name"
+              placeholder="Name"
+              name="name"
+              required
+            />
+            <input
+              type="text"
+              id="phone"
+              placeholder="070-000-000-0"
+              name="phone"
+              required
+            />
+            <input
+              type="email"
+              id="email"
+              placeholder="Email"
+              name="email"
+              required
+            />
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Your message..."
+              required
+              style="resize: vertical; width: 100%; height: 150px"
+            ></textarea>
+  
+            <button type="submit" class="bttn">Submit</button>
+          </form>
+  
+          <p id="loading" style="display: none; color: blue">Sending...</p>
+  
+          <p id="feedback" style="display: none; color: green">
+            Your message has been sent successfully!
+          </p>
+        </div>
+      </div>
+  
+      <div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="js/contact.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="../scripts/app.js"></script>
+    <script>
+      const navAuth = document.getElementById("nav-auth");
+      const loggedUser = JSON.parse(localStorage.loggedInUser);
+
+      if (loggedUser && loggedUser.status) {
+        navAuth.innerHTML = `
+            <a href="profile.html" class="btn btn-hover">
+              <span>Profile</span>
+            </a>
+            <button id="logout" class="btn-danger btn-danger-hover">
+              <span>Logout</span>
+            </button>
+          `;
+
+        document
+          .getElementById("logout")
+          .addEventListener("click", function () {
+            localStorage.removeItem("loggedInUser");
+            window.location.href = "../pages/contactUs.html";
+          });
+      }
+    </script>
+</body>
+</html>
